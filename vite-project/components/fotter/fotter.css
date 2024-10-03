@@ -1,0 +1,72 @@
+/* src/App.css
+.App {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.chat-box {
+    border: 1px solid #ccc;
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.user-message {
+    text-align: left;
+    color: blue;
+}
+
+.bot-message {
+    text-align: left;
+    color: green;
+}
+
+input {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+} */
+
+.chat-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.messages {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.User {
+    text-align: right;
+    color: blue;
+}
+
+.Bot {
+    text-align: left;
+    color: green;
+}
+
+input {
+    width: calc(100% - 100px);
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+}
