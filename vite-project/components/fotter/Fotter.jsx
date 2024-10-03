@@ -6,7 +6,9 @@ import.meta.env.VITE_API_KEY
 
 function Fotter() {
     const [input, setInput] = useState('');
-    const [messages, setMessages] = useState([]);
+    const [messages, setMessages] = useState([{text : "Hi  may I tell you about the course details,Type 'YES' or 'NO' "}])
+    
+    console.log(messages)
     
     console.log(import.meta.env.VITE_API_KEY);
     
@@ -29,24 +31,29 @@ function Fotter() {
     };
 
     return (
-        <div className="chat-container">
-            <h1>Chatbot</h1>
-            <div className="messages">
+        <div className="chat-container container">
+          <div className=' d-flex align-items-center justify-content-center  gap-3 '>
+          <h1 className=' fw-bold text-primary'>Chatbot </h1>
+          <img src="https://cdn-icons-png.flaticon.com/512/4712/4712010.png"  style={{width:"100px"}} alt="" />
+
+          </div>
+            <div className="messages container">
                 {messages.map((msg, index) => (
                     <div key={index} className={msg.sender}>
-                        <strong>{msg.sender}:</strong> {msg.text}
+                        <strong >{msg.sender} : </strong>  {msg.text}
                     </div>
                 ))}
             </div>
-            <form onSubmit={sendMessage}>
+            <form onSubmit={sendMessage} className=' d-flex  gap-2'>
                 <input
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
+                    className=' form-control'
                     placeholder="Type your message..."
                     required
                 />
-                <button type="submit">Send</button>
+                <button type="submit" className=' btn btn-primary'>Send</button>
             </form>
         </div>
     );

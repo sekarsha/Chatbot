@@ -34,6 +34,8 @@ button {
     padding: 10px;
 } */
 
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 .chat-container {
     width: 400px;
     margin: 0 auto;
@@ -48,18 +50,18 @@ button {
     overflow-y: auto;
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #ddd;
+
     border-radius: 5px;
 }
 
 .User {
     text-align: right;
-    color: blue;
+    color:#0d6efd;
 }
 
 .Bot {
     text-align: left;
-    color: green;
+    color:#607d8b;
 }
 
 input {
