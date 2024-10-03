@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../fotter/fotter.css';
-
+import.meta.env.VITE_API_KEY
 
 
 function Fotter() {
     const [input, setInput] = useState('');
     const [messages, setMessages] = useState([]);
-  
-
+    
+    console.log(import.meta.env.VITE_API_KEY);
+    
+ 
     const sendMessage = async (e) => {
         e.preventDefault();
         const userMessage = input;
@@ -16,7 +18,7 @@ function Fotter() {
         setInput('');
 
         try {
-            const response = await axios.post('http://localhost:3000/api/chat', { message: userMessage });
+            const response = await axios.post(`${import.meta.env.VITE_API_KEY}`+"/api/chat", { message: userMessage });
             setMessages(prevMessages => [
                 ...prevMessages,
                 { sender: 'Bot', text: response.data.response }
